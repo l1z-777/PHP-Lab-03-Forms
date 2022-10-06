@@ -26,12 +26,15 @@
         }
 
     ?>
-        <form method="POST" action="task-3-page.php"><br>
-        <input type="submit" name="next_button" value="Next"><br></br>
-        </form>
-        <form method="POST" action="task-2-page.php">
-        <input type="submit" name="change_course_button" value="Change course">
-        </form>
+        <?php if (($definition != NULL )) : ?>
+            <form method="POST" action="task-3-page.php"><br>
+            <input type="submit" name="next_button" value="Next"><br></br>
+            </form>
+        <?php else : ?>
+            <form method="POST" action="task-2-page.php">
+            <input type="submit" name="Back" value="Back">
+            </form>
+        <?php endif; ?>
     </body>
 </html>
 
